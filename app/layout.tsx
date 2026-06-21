@@ -1,5 +1,12 @@
 import Navbar from "@/components/Navbar";
 
+export const metadata = {
+  title: "Pakistan Tax Calculator",
+  description:
+    "Free Pakistan salary tax calculator.",
+};
+
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode; }>) {
