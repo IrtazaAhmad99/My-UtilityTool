@@ -88,23 +88,6 @@ export default function BlogPage() {
 
 
       </section>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: blog.title,
-            description: blog.description,
-            author: {
-              "@type": "Organization",
-              name: "Tax Calculator Pakistan",
-            },
-            datePublished: blog.date,
-          }),
-        }}
-      />
-
     </main>
   );
 }
