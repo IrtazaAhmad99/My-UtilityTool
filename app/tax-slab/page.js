@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 
 export const metadata = {
   title: "Pakistan Salary Tax Slabs 2026",
@@ -129,6 +130,26 @@ const page = () => {
             This amount falls in the second tax slab, therefore tax is
             calculated on the amount exceeding Rs. 600,000.
           </p>
+
+        </div>
+
+        {/* Internal Link Back to Calculator */}
+        <div className="mt-10 bg-blue-50 border border-blue-200 p-6 rounded-xl text-center">
+
+          <h2 className="text-xl font-semibold text-gray-900">
+            Want to calculate your exact tax?
+          </h2>
+
+          <p className="text-gray-600 mt-2">
+            Use our free Pakistan income tax calculator to get instant monthly and annual tax results.
+          </p>
+
+          <Link
+            href="/"
+            className="inline-block mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          >
+            Go to Tax Calculator
+          </Link>
 
         </div>
 

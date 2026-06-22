@@ -1,28 +1,32 @@
+import { blogs } from "@/lib/blogData";
+
 export default function sitemap() {
+  const baseUrl = "https://your-domain.com";
+
+  // blog pages
+  const blogUrls = blogs.map((blog) => ({
+    url: `${baseUrl}/tax-guides/${blog.slug}`,
+    lastModified: new Date(),
+  }));
+
   return [
     {
-      url: "https://your-domain.com/",
+      url: baseUrl,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/tax-slab`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/tax-guides`,
       lastModified: new Date(),
     },
 
-    {
-      url: "https://your-domain.com/tax-calculator",
-      lastModified: new Date(),
-    },
-
-    {
-      url: "https://your-domain.com/tax-slab",
-      lastModified: new Date(),
-    },
-
-    {
-      url: "https://your-domain.com/faq",
-      lastModified: new Date(),
-    },
-
-    {
-      url: "https://your-domain.com/blog",
-      lastModified: new Date(),
-    },
+    ...blogUrls,
   ];
 }

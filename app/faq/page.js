@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link";
 
 export const metadata = {
   title: "Pakistan Salary Tax FAQ",
@@ -103,8 +104,66 @@ const page = () => {
 
         </div>
 
+        {/* Internal Linking Section */}
+        <div className="mt-12 bg-white border border-gray-200 rounded-xl p-6 text-center">
+
+          <h2 className="text-xl font-semibold text-gray-900">
+            Still confused about salary tax?
+          </h2>
+
+          <p className="text-gray-600 mt-2">
+            Use our free Pakistan income tax calculator to instantly calculate your monthly and yearly tax.
+          </p>
+
+          <Link
+            href="/"
+            className="inline-block mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+          >
+            Try Tax Calculator
+          </Link>
+
+        </div>
+
 
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How is salary tax calculated in Pakistan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Salary tax in Pakistan is calculated on annual income. Monthly salary is multiplied by 12 and then tax slabs are applied.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is income up to 600,000 tax free in Pakistan?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Yes, income up to 600,000 PKR annually is generally tax free in Pakistan.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I calculate tax on monthly salary?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text:
+                    "Multiply monthly salary by 12 to get annual income, then apply tax slabs and divide yearly tax by 12.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
     </main>
 

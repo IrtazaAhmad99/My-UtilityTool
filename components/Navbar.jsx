@@ -15,13 +15,17 @@ const Navbar = () => {
       href: "/tax-slab",
     },
     {
-        name:"Blogs",
-        href:"/blog"
+        name:"Tax Guides",
+        href:"/tax-guides"
     },
     {
       name: "FAQ",
       href: "/faq",
     },
+    {
+      name:"Privacy Policy",
+      href: "/privacy-policy"
+    }
   ];
 
 
